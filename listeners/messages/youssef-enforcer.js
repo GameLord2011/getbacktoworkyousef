@@ -15,7 +15,7 @@ function isBetween6pmAnd12am() {
 
 export const getBackToWorkYoussefCallback = async ({ message, client, logger }) => {
   // --- DEBUG LOGGING ---
-  logger.info('[YoussefEnforcer] Incoming message:', message);
+  logger.debug('[YoussefEnforcer] Incoming message:', message);
 
   try {
     if (!message) {
