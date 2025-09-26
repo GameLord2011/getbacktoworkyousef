@@ -9,7 +9,8 @@ const CUSTOM_MESSAGE = 'GET BACK TO WORK!';
 // Helper: check if now is between 18:00 and 23:59 in Youssef's timezone
 function isBetween6pmAnd12am() {
   const now = DateTime.now().setZone(YOUSSEF_TIMEZONE);
-  return now.hour >= 18 && now.hour < 24;
+  const isWeekend = now.weekday === 6 || now.weekday === 7; // 6 = Saturday, 7 = Sunday
+  return (now.hour >= 18 && now.hour < 24) || !isWeekend;
 }
 
 export const getBackToWorkYoussefCallback = async ({ message, client, logger }) => {
