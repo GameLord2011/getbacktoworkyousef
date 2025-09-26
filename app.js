@@ -13,11 +13,13 @@ const app = new bolt.App({
 });
 
 /** Register Listeners */
+console.log('[app.js] Registering listeners');
 registerListeners(app);
 
 /** Start the Bolt App */
 (async () => {
   try {
+    console.log('[app.js] Starting Bolt app');
     await app.start();
     app.logger.info('⚡️ Bolt app is running!');
   } catch (error) {

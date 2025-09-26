@@ -6,6 +6,7 @@ import * as shortcuts from './shortcuts/index.js';
 import * as views from './views/index.js';
 
 export const registerListeners = (app) => {
+  console.log('[listeners/index.js] Registering all listeners');
   actions.register(app);
   commands.register(app);
   events.register(app);
