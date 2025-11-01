@@ -18,7 +18,7 @@
     "slackapi"
   ],
   "dependencies": {
-    "@slack/bolt": "^4.4.0",
+    "@slack/bolt": "^4.6.0",
     "dotenv": "~17.2.1",
     "luxon": "^3.4.4"
   },
